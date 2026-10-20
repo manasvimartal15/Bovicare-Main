@@ -1,0 +1,715 @@
+/* ==========================================================================
+   BoviCare Vet Appointment Booking System Styles
+   Theme: Forest Green, Cream/White backgrounds, Mint surfaces, Rounded Cards
+   ========================================================================== */
+
+/* Page Wrapper */
+.appointment-page-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-bg-app);
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Steps Progress Header */
+.booking-steps-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg-card);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0.5rem;
+}
+
+.booking-step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.booking-step-item.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.booking-step-item.completed {
+  color: var(--color-success-text);
+}
+
+.step-num-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+}
+
+.booking-step-item.active .step-num-badge {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.booking-step-item.completed .step-num-badge {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: var(--color-success-border);
+}
+
+.step-divider-line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border-subtle);
+  margin: 0 1rem;
+}
+
+/* Vets List Screen */
+.vets-selection-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vet-card {
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.vet-card:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-card);
+}
+
+.vet-card.selected {
+  border-color: var(--color-primary);
+  background: #FAFCF9;
+  box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-card);
+}
+
+.vet-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.vet-header-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.vet-avatar-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-mint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-strong);
+}
+
+.vet-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vet-doctor-name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.vet-qual-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.vet-clinic-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.vet-meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px dashed var(--color-border-subtle);
+  border-bottom: 1px dashed var(--color-border-subtle);
+}
+
+.vet-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: var(--font-size-xs);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.vet-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.vet-avail-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-success-text);
+  font-weight: var(--font-weight-semibold);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* Booking Form Elements */
+.booking-form-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-group-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Visit Type Cards */
+.visit-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.visit-type-option {
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  cursor: pointer;
+  background: var(--color-bg-card);
+  transition: all var(--transition-fast);
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+
+.visit-type-option:hover {
+  border-color: var(--color-primary-light);
+  background: var(--color-surface-subtle);
+}
+
+.visit-type-option.selected {
+  border-color: var(--color-primary);
+  background: var(--color-surface-mint);
+}
+
+.visit-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.visit-type-option.selected .visit-icon-circle {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.visit-info h4 {
+  margin: 0 0 0.25rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.visit-info p {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* Time Slots Grid */
+.time-slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+  gap: 0.625rem;
+}
+
+.slot-btn {
+  padding: 0.625rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border-subtle);
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.slot-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-surface-subtle);
+}
+
+.slot-btn.selected {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 6px rgba(26, 61, 47, 0.3);
+}
+
+.slot-btn:disabled,
+.slot-btn.booked {
+  background: #F1F4F1;
+  color: var(--color-text-muted);
+  border-color: #E2E8DF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.slot-sub-status {
+  font-size: 10px;
+  font-weight: var(--font-weight-regular);
+}
+
+.slot-btn.selected .slot-sub-status {
+  color: #D3EBD9;
+}
+
+/* Quick Symptoms Chips */
+.quick-symptoms-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.symptom-chip {
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.symptom-chip:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.symptom-chip.active {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* Booking Summary Card */
+.booking-summary-box {
+  background: var(--color-surface-mint);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px dashed rgba(26, 61, 47, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.summary-label {
+  color: var(--color-text-secondary);
+}
+
+.summary-val {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-align: right;
+}
+
+/* Appointments List / Triage Cards */
+.appointments-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment-item-card {
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.appointment-item-card:hover {
+  border-color: var(--color-border-strong);
+}
+
+.appointment-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.appointment-header-details {
+  display: flex;
+  gap: 0.875rem;
+  align-items: center;
+}
+
+.appointment-date-badge {
+  background: var(--color-surface-mint);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+}
+
+.date-day-large {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.date-month-small {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.appointment-header-copy h3 {
+  margin: 0 0 0.25rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.appointment-time-tag {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.appointment-details-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+}
+
+.detail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.detail-value {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.appointment-symptoms-box {
+  background: #FFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.625rem 0.75rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.rejection-reason-alert {
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  color: var(--color-danger-text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.completion-notes-box {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success-text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.appointment-actions-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Modals */
+.appointment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 38, 28, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.appointment-modal-box {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  max-width: 520px;
+  width: 100%;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-modal);
+  border: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header-row h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.modal-btn-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-xs);
+}
+
+.modal-btn-close:hover {
+  background: var(--color-surface-subtle);
+  color: var(--color-text-primary);
+}
+
+/* Availability Config Grid */
+.days-toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day-toggle-btn {
+  padding: 0.625rem 0.25rem;
+  text-align: center;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.day-toggle-btn.active {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* Empty State */
+.appointments-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1.5px dashed var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-state-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-surface-mint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state-illustration-box {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 16px rgba(22, 56, 43, 0.08);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-subtle);
+}
+
+.empty-state-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.appointments-empty-state h3 {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.appointments-empty-state p {
+  margin: 0;
+  max-width: 380px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Responsive adjustment */
+@media (max-width: 640px) {
+  .booking-steps-bar {
+    padding: 0.75rem;
+  }
+  .booking-step-item span.step-title {
+    display: none;
+  }
+  .vet-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .appointment-actions-footer {
+    justify-content: stretch;
+  }
+  .appointment-actions-footer button {
+    flex: 1;
+  }
+}

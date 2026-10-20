@@ -1,0 +1,89 @@
+/* BoviCare Design System Tokens
+   Preserving visual identity from the Dairy Farm App Prototype:
+   Forest-green accents, cream and white backgrounds, pale-green surfaces, rounded cards, compact typography
+*/
+
+:root {
+  /* Brand Forest Green Palette */
+  --color-primary: #1A3D2F;
+  --color-primary-hover: #132F24;
+  --color-primary-active: #0D2119;
+  --color-primary-light: #2A5A46;
+  --color-primary-gradient: linear-gradient(135deg, #1A3D2F 0%, #255441 100%);
+
+  /* Pale Green Surfaces */
+  --color-surface-mint: #EAF2EC;
+  --color-surface-mint-hover: #DFECE2;
+  --color-surface-subtle: #F3F7F4;
+  --color-surface-dark: #16382B;
+
+  /* App Canvas & Cards */
+  --color-bg-app: #F5F7F3;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-subtle: #F9FAF7;
+  --color-bg-input: #FFFFFF;
+  --color-bg-overlay: rgba(19, 42, 33, 0.45);
+
+  /* Borders */
+  --color-border-subtle: #E2E8DF;
+  --color-border-strong: #C9D6C5;
+  --color-border-active: #1A3D2F;
+
+  /* Text & Labels */
+  --color-text-primary: #17261E;
+  --color-text-secondary: #58695E;
+  --color-text-muted: #819286;
+  --color-text-inverse: #FFFFFF;
+  --color-text-link: #1A3D2F;
+
+  /* Status Colors */
+  --color-success-bg: #E7F7ED;
+  --color-success-text: #17733E;
+  --color-success-border: #C1EACE;
+
+  --color-warning-bg: #FEF3E2;
+  --color-warning-text: #B45309;
+  --color-warning-border: #FCD9A5;
+
+  --color-danger-bg: #FEECEB;
+  --color-danger-text: #C53030;
+  --color-danger-border: #F9C3C1;
+
+  --color-info-bg: #EAF1F8;
+  --color-info-text: #245788;
+  --color-info-border: #C8DDF2;
+
+  /* Typography */
+  --font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.84375rem;  /* 13.5px */
+  --font-size-base: 0.9375rem; /* 15px */
+  --font-size-md: 1.0625rem;   /* 17px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 1.875rem;   /* 30px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(22, 45, 33, 0.05);
+  --shadow-card: 0 4px 16px -2px rgba(22, 45, 33, 0.06), 0 2px 6px -1px rgba(22, 45, 33, 0.03);
+  --shadow-card-elevated: 0 12px 32px -4px rgba(22, 45, 33, 0.1), 0 4px 12px -2px rgba(22, 45, 33, 0.05);
+  --shadow-modal: 0 24px 48px -8px rgba(18, 38, 28, 0.22);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}

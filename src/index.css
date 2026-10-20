@@ -1,0 +1,41 @@
+/* Centralized Design System Import & Root Base Styles */
+@import './styles/tokens.css';
+@import './styles/auth.css';
+@import './styles/destinations.css';
+@import './styles/dashboardLayouts.css';
+@import './styles/cows.css';
+@import './styles/assessment.css';
+@import './styles/quickActions.css';
+@import './styles/healthRecords.css';
+@import './styles/appointments.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-bg-app);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure accessible focus across interactive elements */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,704 @@
+/* BoviCare Quick Actions: Fever Monitoring, Milk Log, and Vaccine Care Styles
+   Preserving visual identity from the Dairy Farm App Prototype:
+   Forest-green accents (#1A3D2F), cream/white backgrounds (#F5F7F3, #FFFFFF),
+   pale-green surfaces (#EAF2EC), rounded cards, compact typography
+*/
+
+.quick-action-page-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-bg-app);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  padding-bottom: 50px;
+}
+
+.quick-action-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px 16px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Prototype Disclaimer Banner */
+.prototype-disclaimer-card {
+  background: #FFFDF0;
+  border: 1px solid #F6E05E;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #744210;
+  font-size: var(--font-size-xs);
+  line-height: 1.45;
+}
+
+.prototype-disclaimer-card .disclaimer-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #B7791F;
+}
+
+.prototype-disclaimer-card strong {
+  font-weight: var(--font-weight-bold);
+  color: #5F370E;
+}
+
+/* Selected Cow Header Card */
+.selected-cow-summary-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(22, 56, 43, 0.04);
+}
+
+.quick-cow-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.quick-cow-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.quick-cow-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quick-cow-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.quick-cow-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-cow-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.quick-cow-tag {
+  font-size: 11.5px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  background: var(--color-surface-mint);
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+}
+
+.quick-cow-sub {
+  font-size: 11.5px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.btn-change-cow-pill {
+  background: var(--color-surface-mint);
+  color: var(--color-primary);
+  border: 1px solid rgba(26, 61, 47, 0.15);
+  border-radius: var(--radius-full);
+  padding: 6px 13px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-change-cow-pill:hover {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* Main Form Card */
+.quick-form-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 1px 4px rgba(22, 56, 43, 0.04);
+}
+
+.form-card-header {
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-card-title {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.form-card-badge {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-mint);
+  color: var(--color-primary);
+}
+
+/* Form Fields */
+.quick-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-field-group.horizontal-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .quick-field-group.horizontal-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quick-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quick-input,
+.quick-select,
+.quick-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.quick-input:focus,
+.quick-select:focus,
+.quick-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(26, 61, 47, 0.12);
+}
+
+.quick-textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+/* Temperature Input Container */
+.temp-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.temp-input-box {
+  position: relative;
+  flex: 1;
+}
+
+.temp-input-box .quick-input {
+  padding-right: 48px;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.temp-unit-adornment {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.temp-adjust-btn {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-strong);
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.temp-adjust-btn:hover {
+  background: var(--color-surface-mint);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Quick Temperature Presets */
+.temp-presets-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.preset-chip {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.preset-chip:hover,
+.preset-chip.active {
+  background: var(--color-surface-mint);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Physiological Range Warning / Live Status Box */
+.temp-range-card {
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--font-size-xs);
+  line-height: 1.45;
+  transition: all var(--transition-fast);
+}
+
+.temp-range-card.normal {
+  background: #EAF7EE;
+  border: 1px solid #A7E0B9;
+  color: #17733E;
+}
+
+.temp-range-card.warm {
+  background: #FFF9E6;
+  border: 1px solid #FCD9A5;
+  color: #B45309;
+}
+
+.temp-range-card.fever {
+  background: #FEECEB;
+  border: 1px solid #F9C3C1;
+  color: #C53030;
+}
+
+.temp-range-card.low {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1E40AF;
+}
+
+.temp-range-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.temp-range-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.temp-range-title {
+  font-weight: var(--font-weight-bold);
+  font-size: 13px;
+}
+
+.temp-range-desc {
+  font-size: 11.5px;
+  opacity: 0.95;
+}
+
+/* Symptom Checkbox Chips */
+.symptoms-selector-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.symptom-toggle-chip {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.symptom-toggle-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.symptom-toggle-chip.active {
+  background: var(--color-surface-mint);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Milk Log Calculation Card */
+.milk-calculated-total-card {
+  background: linear-gradient(135deg, #1A3D2F 0%, #255441 100%);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(22, 56, 43, 0.15);
+}
+
+.calc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.calc-label {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--font-weight-semibold);
+}
+
+.calc-formula {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.calc-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.calc-total-num {
+  font-size: 1.85rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.calc-total-unit {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2px;
+}
+
+/* Vaccine Preset Intervals */
+.interval-chips-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.interval-chip {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.interval-chip:hover {
+  background: var(--color-surface-mint);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Form Action Buttons */
+.form-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-form-cancel {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  padding: 9px 20px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-form-cancel:hover {
+  background: var(--color-surface-subtle);
+  color: var(--color-text-primary);
+}
+
+.btn-form-save {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 10px 24px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(22, 56, 43, 0.15);
+  transition: all var(--transition-fast);
+}
+
+.btn-form-save:hover {
+  background: var(--color-primary-hover);
+}
+
+/* History Card Section */
+.history-section-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 1px 4px rgba(22, 56, 43, 0.04);
+}
+
+.history-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 12px;
+}
+
+.history-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-title {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.history-counter-badge {
+  background: var(--color-surface-mint);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.history-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item-row {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.history-item-row:hover {
+  background: #FFFFFF;
+  border-color: var(--color-border-strong);
+  box-shadow: 0 2px 6px rgba(22, 56, 43, 0.05);
+}
+
+.history-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.history-date-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.history-metric-val {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.history-symptoms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.symptom-tag-pill {
+  background: rgba(26, 61, 47, 0.08);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+}
+
+.history-notes-text {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin: 2px 0 0;
+  font-style: italic;
+}
+
+/* Vaccine Status Badges */
+.vaccine-due-badge {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vaccine-due-badge.overdue {
+  background: #FEECEB;
+  color: #C53030;
+  border: 1px solid #F9C3C1;
+}
+
+.vaccine-due-badge.soon {
+  background: #FEF3E2;
+  color: #B45309;
+  border: 1px solid #FCD9A5;
+}
+
+.vaccine-due-badge.scheduled {
+  background: #EAF2EC;
+  color: #16382B;
+  border: 1px solid #C9D6C5;
+}
+
+.vaccine-due-badge.completed {
+  background: #E7F7ED;
+  color: #17733E;
+  border: 1px solid #C1EACE;
+}
+
+/* Empty State */
+.history-empty-box {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.empty-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
