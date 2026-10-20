@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, UserPlus, CheckCircle2, ArrowRight } from 'lucide-react';
 import { ROLE_DEFINITIONS } from '../../data/roles';
 import VetKycRegisterModal from './VetKycRegisterModal';
+import BrandLogo from '../common/BrandLogo';
 
 export default function RegisterModal({ isOpen, onClose, selectedRole, onRegisteredLogin }) {
   const [activeRole, setActiveRole] = useState(
@@ -58,19 +59,22 @@ export default function RegisterModal({ isOpen, onClose, selectedRole, onRegiste
   return (
     <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true">
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
+        <div className="modal-header" style={{ flexDirection: 'column', alignItems: 'stretch', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <BrandLogo size="medium" />
+            <button
+              type="button"
+              className="modal-close-btn"
+              onClick={onClose}
+              aria-label="Close dialog"
+            >
+              <X size={18} />
+            </button>
+          </div>
           <div className="modal-title-wrap">
             <span className="modal-badge">Create Account</span>
-            <h3 className="modal-title">Create BoviCare Account</h3>
+            <h3 className="modal-title" style={{ marginTop: '4px' }}>Create BoviCare Account</h3>
           </div>
-          <button
-            type="button"
-            className="modal-close-btn"
-            onClick={onClose}
-            aria-label="Close dialog"
-          >
-            <X size={18} />
-          </button>
         </div>
 
         <div className="modal-body">

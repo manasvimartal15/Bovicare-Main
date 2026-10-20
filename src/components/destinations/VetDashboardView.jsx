@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { Stethoscope, ArrowLeft, LogOut, CheckCircle2, Tractor, ShieldCheck } from 'lucide-react';
+import BrandLogo from '../common/BrandLogo';
 
 export default function VetDashboardView() {
   const { currentUser, logout, navigateTo } = useAuth();
@@ -10,6 +11,9 @@ export default function VetDashboardView() {
       {/* Top App Bar */}
       <header className="destination-top-bar vet-theme">
         <div className="bar-left">
+          <div className="destination-logo-wrap">
+            <BrandLogo size="header" />
+          </div>
           <div className="user-avatar-badge vet-avatar">
             {currentUser?.avatarInitials || 'RS'}
           </div>

@@ -16,6 +16,7 @@ import {
   Lock,
 } from 'lucide-react';
 import { submitVetKyc } from '../../services/kycService';
+import BrandLogo from '../common/BrandLogo';
 
 const ALLOWED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'];
 const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
@@ -196,7 +197,18 @@ export default function VetKycRegisterModal({ isOpen, onClose, onRegisteredLogin
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="modal-header">
+        <div className="modal-header" style={{ flexDirection: 'column', alignItems: 'stretch', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <BrandLogo size="medium" />
+            <button
+              type="button"
+              className="modal-close-btn"
+              onClick={onClose}
+              aria-label="Close dialog"
+            >
+              <X size={18} />
+            </button>
+          </div>
           <div className="modal-title-wrap">
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
               <span className="modal-badge" style={{ background: 'var(--color-surface-mint)', color: 'var(--color-primary)' }}>
@@ -210,14 +222,6 @@ export default function VetKycRegisterModal({ isOpen, onClose, onRegisteredLogin
               Veterinarian Registration & Credential Verification
             </h3>
           </div>
-          <button
-            type="button"
-            className="modal-close-btn"
-            onClick={onClose}
-            aria-label="Close dialog"
-          >
-            <X size={18} />
-          </button>
         </div>
 
         {/* Modal Body */}

@@ -83,7 +83,7 @@ export default function LoginForm() {
         <div className="login-card-surface">
           {/* Brand Header */}
           <header className="login-header">
-            <BrandLogo size="medium" />
+            <BrandLogo size="large" />
             <div className="login-welcome-text">
               <h1 className="login-heading">Welcome to BoviCare</h1>
               <p className="login-subheading">

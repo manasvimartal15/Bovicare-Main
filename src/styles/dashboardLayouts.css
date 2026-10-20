@@ -3489,5 +3489,101 @@ textarea:focus-visible,
   }
 }
 
+/* Official BoviCare Brand Logo Styles */
+.bovicare-official-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: opacity var(--transition-fast, 0.15s ease), transform var(--transition-fast, 0.15s ease);
+}
+
+.bovicare-official-brand[role="button"] {
+  cursor: pointer;
+}
+
+.bovicare-official-brand[role="button"]:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.bovicare-official-logo-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Size Variants */
+.bovicare-brand-large {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.bovicare-brand-large .bovicare-official-logo-img {
+  max-height: 76px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.bovicare-brand-medium {
+  width: 100%;
+  max-width: 220px;
+}
+
+.bovicare-brand-medium .bovicare-official-logo-img {
+  max-height: 52px;
+  width: auto;
+}
+
+.bovicare-brand-small {
+  display: flex;
+  align-items: center;
+  max-height: 40px;
+}
+
+.bovicare-brand-small .bovicare-official-logo-img {
+  max-height: 38px;
+  max-width: 150px;
+  width: auto;
+}
+
+.bovicare-brand-header {
+  background: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+}
+
+.bovicare-brand-header .bovicare-official-logo-img {
+  max-height: 28px;
+  max-width: 120px;
+  width: auto;
+}
+
+/* Header Brand Display Positioning */
+.topbar-brand-display {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+@media (max-width: 580px) {
+  .topbar-brand-display {
+    display: none;
+  }
+}
+
+.destination-logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
 
 

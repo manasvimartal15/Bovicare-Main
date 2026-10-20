@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Bell, LogOut, ChevronDown, Menu } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import SidebarDrawer from './SidebarDrawer';
+import BrandLogo from './BrandLogo';
 
 export default function DashboardHeader({
   avatarInitials = 'RP',
@@ -32,6 +33,11 @@ export default function DashboardHeader({
           >
             <Menu size={20} />
           </button>
+
+          {/* Official BoviCare Brand Logo */}
+          <div className="topbar-brand-display" title="BoviCare Dairy Cattle Health">
+            <BrandLogo size="header" />
+          </div>
 
           <div className="topbar-avatar" title={`${currentUser?.fullName || greetingName} (${roleBadge})`}>
             {avatarInitials}

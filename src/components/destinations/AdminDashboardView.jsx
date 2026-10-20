@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { ShieldCheck, ArrowLeft, LogOut, CheckCircle2, Tractor, Stethoscope } from 'lucide-react';
+import BrandLogo from '../common/BrandLogo';
 
 export default function AdminDashboardView() {
   const { currentUser, logout, navigateTo } = useAuth();
@@ -10,6 +11,9 @@ export default function AdminDashboardView() {
       {/* Top App Bar */}
       <header className="destination-top-bar admin-theme">
         <div className="bar-left">
+          <div className="destination-logo-wrap">
+            <BrandLogo size="header" />
+          </div>
           <div className="user-avatar-badge admin-avatar">
             {currentUser?.avatarInitials || 'SR'}
           </div>

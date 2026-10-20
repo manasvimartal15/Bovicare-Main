@@ -11,6 +11,9 @@ export default function FarmerDashboardView() {
       {/* Top App Bar resembling Screen 1 from collage */}
       <header className="destination-top-bar">
         <div className="bar-left">
+          <div className="destination-logo-wrap">
+            <BrandLogo size="header" />
+          </div>
           <div className="user-avatar-badge">
             {currentUser?.avatarInitials || 'RP'}
           </div>
